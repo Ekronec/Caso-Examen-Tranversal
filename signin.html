@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Animalia</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.bundle.min.js"></script>
+      </head>
+    <body class="text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+          </symbol>
+          <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+          </symbol>
+          <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+          </symbol>
+          <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+          </symbol>
+        </svg>
+    
+        <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+          <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                Light
+                <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true">
+                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                Dark
+                <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                Auto
+                <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+    
+        
+    <main class="form-signin w-100 m-auto">
+      <form>
+        <img class="mb-4" src="images/Animalia logo.png" alt="" width="250" height="57">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+    
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-body-secondary">© 2023</p>
+      </form>
+    </main>
+    
+    
+        
+      <style>
+    .text-center {
+        text-align: center!important;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+    }
+    html, body {
+        height: 100%;
+    }
+    body {
+        margin: 0;
+        font-family: var(--bs-body-font-family);
+        font-size: var(--bs-body-font-size);
+        font-weight: var(--bs-body-font-weight);
+        line-height: var(--bs-body-line-height);
+        color: var(--bs-body-color);
+        text-align: var(--bs-body-text-align);
+        background-color: var(--bs-body-bg);
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+    user agent stylesheet
+    body {
+        display: block;
+        margin: 8px;
+    }
+    :root {
+        --bs-breakpoint-xs: 0;
+        --bs-breakpoint-sm: 576px;
+        --bs-breakpoint-md: 768px;
+        --bs-breakpoint-lg: 992px;
+        --bs-breakpoint-xl: 1200px;
+        --bs-breakpoint-xxl: 1400px;
+    }
+    [data-bs-theme=dark] {
+        color-scheme: dark;
+        --bs-body-color: #adb5bd;
+        --bs-body-color-rgb: 173,181,189;
+        --bs-body-bg: #212529;
+        --bs-body-bg-rgb: 33,37,41;
+        --bs-emphasis-color: #fff;
+        --bs-emphasis-color-rgb: 255,255,255;
+        --bs-secondary-color: rgba(173, 181, 189, 0.75);
+        --bs-secondary-color-rgb: 173,181,189;
+        --bs-secondary-bg: #343a40;
+        --bs-secondary-bg-rgb: 52,58,64;
+        --bs-tertiary-color: rgba(173, 181, 189, 0.5);
+        --bs-tertiary-color-rgb: 173,181,189;
+        --bs-tertiary-bg: #2b3035;
+        --bs-tertiary-bg-rgb: 43,48,53;
+        --bs-primary-text-emphasis: #6ea8fe;
+        --bs-secondary-text-emphasis: #a7acb1;
+        --bs-success-text-emphasis: #75b798;
+        --bs-info-text-emphasis: #6edff6;
+        --bs-warning-text-emphasis: #ffda6a;
+        --bs-danger-text-emphasis: #ea868f;
+        --bs-light-text-emphasis: #f8f9fa;
+        --bs-dark-text-emphasis: #dee2e6;
+        --bs-primary-bg-subtle: #031633;
+        --bs-secondary-bg-subtle: #161719;
+        --bs-success-bg-subtle: #051b11;
+        --bs-info-bg-subtle: #032830;
+        --bs-warning-bg-subtle: #332701;
+        --bs-danger-bg-subtle: #2c0b0e;
+        --bs-light-bg-subtle: #343a40;
+        --bs-dark-bg-subtle: #1a1d20;
+        --bs-primary-border-subtle: #084298;
+        --bs-secondary-border-subtle: #41464b;
+        --bs-success-border-subtle: #0f5132;
+        --bs-info-border-subtle: #087990;
+        --bs-warning-border-subtle: #997404;
+        --bs-danger-border-subtle: #842029;
+        --bs-light-border-subtle: #495057;
+        --bs-dark-border-subtle: #343a40;
+        --bs-link-color: #6ea8fe;
+        --bs-link-hover-color: #8bb9fe;
+        --bs-link-color-rgb: 110,168,254;
+        --bs-link-hover-color-rgb: 139,185,254;
+        --bs-code-color: #e685b5;
+        --bs-border-color: #495057;
+        --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+        --bs-form-valid-color: #75b798;
+        --bs-form-valid-border-color: #75b798;
+        --bs-form-invalid-color: #ea868f;
+        --bs-form-invalid-border-color: #ea868f;
+    }
+    :root, [data-bs-theme=light] {
+        --bs-blue: #0d6efd;
+        --bs-indigo: #6610f2;
+        --bs-purple: #6f42c1;
+        --bs-pink: #d63384;
+        --bs-red: #dc3545;
+        --bs-orange: #fd7e14;
+        --bs-yellow: #ffc107;
+        --bs-green: #198754;
+        --bs-teal: #20c997;
+        --bs-cyan: #0dcaf0;
+        --bs-black: #000;
+        --bs-white: #fff;
+        --bs-gray: #6c757d;
+        --bs-gray-dark: #343a40;
+        --bs-gray-100: #f8f9fa;
+        --bs-gray-200: #e9ecef;
+        --bs-gray-300: #dee2e6;
+        --bs-gray-400: #ced4da;
+        --bs-gray-500: #adb5bd;
+        --bs-gray-600: #6c757d;
+        --bs-gray-700: #495057;
+        --bs-gray-800: #343a40;
+        --bs-gray-900: #212529;
+        --bs-primary: #0d6efd;
+        --bs-secondary: #6c757d;
+        --bs-success: #198754;
+        --bs-info: #0dcaf0;
+        --bs-warning: #ffc107;
+        --bs-danger: #dc3545;
+        --bs-light: #f8f9fa;
+        --bs-dark: #212529;
+        --bs-primary-rgb: 13,110,253;
+        --bs-secondary-rgb: 108,117,125;
+        --bs-success-rgb: 25,135,84;
+        --bs-info-rgb: 13,202,240;
+        --bs-warning-rgb: 255,193,7;
+        --bs-danger-rgb: 220,53,69;
+        --bs-light-rgb: 248,249,250;
+        --bs-dark-rgb: 33,37,41;
+        --bs-primary-text-emphasis: #052c65;
+        --bs-secondary-text-emphasis: #2b2f32;
+        --bs-success-text-emphasis: #0a3622;
+        --bs-info-text-emphasis: #055160;
+        --bs-warning-text-emphasis: #664d03;
+        --bs-danger-text-emphasis: #58151c;
+        --bs-light-text-emphasis: #495057;
+        --bs-dark-text-emphasis: #495057;
+        --bs-primary-bg-subtle: #cfe2ff;
+        --bs-secondary-bg-subtle: #e2e3e5;
+        --bs-success-bg-subtle: #d1e7dd;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+        body {
+            height: 100%;
+          }
+          
+          body {
+            display: flex;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+          }
+          
+          .form-signin {
+            max-width: 330px;
+            padding: 15px;
+          }
+          
+          .form-signin .form-floating:focus-within {
+            z-index: 2;
+          }
+          
+          .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          
+          .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+    </style>
+    
+    </body>
+</html>     
