@@ -5,3 +5,7 @@ https://es.wix.com/website-template/view/html/2331?originUrl=https%3A%2F%2Fes.wi
 
 --Link pagina tipo
 https://startbootstrap.com/template/shop-homepage
+
+--Nota
+Trate de conectar el boton de "Agregar al carro" con el carrito pero este se conecta mediante un HREF y no pude hacerlo.
+Se debe borrar la pagina carrito.
