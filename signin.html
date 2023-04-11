@@ -58,16 +58,16 @@
     
         
     <main class="form-signin w-100 m-auto">
-      <form action="" method="post">
+      <form action="Formulario.php" method="post">
         <img class="mb-4" src="images/Animalia logo.png" alt="" rem="18">
         <h1 class="h3 mb-3 fw-normal">Ingresar</h1>
     
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="emailUsuario" required>
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" id="emailUsuario" name="emailUsuario" required>
           <label for="floatingInput">Correo</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required>
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" id="password" name="password" required>
           <label for="floatingPassword">Contraseña</label>
         </div>
     
@@ -76,7 +76,7 @@
             <input type="checkbox" value="remember-me"> Recuerdame
           </label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
+        <input class="w-100 btn btn-lg btn-primary" type="submit" value="Ingresar">
         <p class="mt-5 mb-3 text-body-secondary">© 2023</p>
       </form>
     </main>
