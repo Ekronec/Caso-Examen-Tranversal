@@ -1,10 +1,11 @@
-var itemNumber = 0
+let itemNumber = 0
 
 function addItemNumber() {
     itemNumber = itemNumber + 1;
     console.log(itemNumber)
+    document.getElementById("itnumber").innerHTML = itemNumber
 }
 
-function showNumber(){
+function showNumber(itemNumber){
     return itemNumber
 }
