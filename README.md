@@ -9,3 +9,4 @@ https://startbootstrap.com/template/shop-homepage
 --Nota
 Trate de conectar el boton de "Agregar al carro" con el carrito pero este se conecta mediante un HREF y no pude hacerlo.
 Se debe borrar la pagina carrito.
+[Caso A Examen Transversal PGY3121.pdf](https://github.com/Ekronec/Caso-Examen-Tranversal/files/11345427/Caso.A.Examen.Transversal.PGY3121.pdf)
