@@ -58,7 +58,7 @@
     
         
     <main class="form-signin w-100 m-auto">
-      <form action="formulario.php" method="post"> 
+      <form action="" method="post"> 
         <img class="mb-4" src="images/Animalia logo.png" alt="" rem="18">
         <h1 class="h3 mb-3 fw-normal">Ingresar</h1>
     
@@ -76,21 +76,8 @@
             <input type="checkbox" value="remember-me"> Recuerdame
           </label>
         </div>
-        <input class="w-100 btn btn-lg btn-primary" type="submit" value="Ingresar" name="submit">
+        <input class="w-100 btn btn-lg btn-primary" type="button" value="Ingresar" name="submit">
         <p class="mt-5 mb-3 text-body-secondary">© 2023</p>
-        <script>
-          function loadXMLDoc() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("emailUsuario").innerHTML =
-                this.responseText;
-              }
-            };
-            xhttp.open("GET", "formulario.php", true);
-            xhttp.send();
-          }
-          </script>
       </form>
     </main>
     
