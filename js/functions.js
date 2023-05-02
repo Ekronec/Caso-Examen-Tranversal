@@ -10,3 +10,10 @@ function addItemNumber() {
 function showNumber(itemNumber){
     return itemNumber
 }
+
+function confPass(){
+    if (document.getElementById("password").innerHTML === document.getElementById("confPassword").innerHTML)
+    console.log("funciona");
+    else 
+    console.log("No son iguales")
+}
