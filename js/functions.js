@@ -1,4 +1,5 @@
 let itemNumber = 0
+const emails =[]
 
 function addItemNumber() {
     itemNumber = itemNumber + 1;
@@ -16,4 +17,9 @@ function confPass(){
     console.log("funciona");
     else 
     console.log("No son iguales")
+}
+
+function addingEmail(nameEmail){
+    emails.push(nameEmail);
+    console.log(emails);
 }
