@@ -83,15 +83,15 @@
     </div>
     <div class="form-floating">
       <select class="form-control"  placeholder="region" id="region" name="region" required><option value="" disable hidden></option></select> 
-      <label for="emailUsuario">Region</label>
+      <label for="region">Region</label>
     </div>
     <div class="form-floating">
       <select type="text" class="form-control"  placeholder="comuna" id="comuna" name="comuna" required>
-      <label for="emailUsuario">Comuna</label>
+      <label for="comuna">Comuna</label>
     </div>
     <div class="form-floating">
       <input type="text" class="form-control"  placeholder="adress" id="adress" name="adress" required>
-      <label for="emailUsuario">Calle</label>
+      <label for="adress">Calle</label>
     </div>
       <br>
     <div class="checkbox mb-3">
@@ -99,7 +99,7 @@
         <input type="checkbox" value="remember-me"> Recuerdame
       </label>
     </div>
-    <input class="w-100 btn btn-lg btn-primary" type="button" value="Ingresar" name="createUser" id="createUser">
+    <input class="w-100 btn btn-lg btn-primary" type="button" value="Ingresar" name="createUser" id="createUser" onclick="confPass()">
     <p class="mt-5 mb-3 text-body-secondary">© 2023</p>
   </form>
 </main>

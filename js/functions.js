@@ -13,7 +13,7 @@ function showNumber(itemNumber){
 }
 
 function confPass(){
-    if (document.getElementById("password").innerHTML === document.getElementById("confPassword").innerHTML)
+    if (document.getElementById("password").value === document.getElementById("confPassword").value)
     console.log("funciona");
     else 
     console.log("No son iguales")
