@@ -11,7 +11,7 @@
         <script src="js/jquery-3.6.4.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #ffffff;">
+    <nav class="navbar navbar-expand-lg" style="background-color: #f7f7f7;">
         <div class="container-fluid">
           <a href="index.html"><img src="images/Animalia logo.png" alt="Bootstrap" width="auto" height="35" role="button"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
         </div>
       </nav>
       <!--Header 2-->
-      <nav class="navbar navbar-expand-lg " style="background-color: #ffffff;">
+      <nav class="navbar navbar-expand-lg " style="background-color: #f7f7f7;">
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -42,14 +42,18 @@
                 <a class="nav-link" href="Bird.html">Pajaros</a>
               </li>
               </ul>
-              <form class="d-flex" role="button">
-
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+          <form class="d-flex" role="button">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                   aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="21"
                     fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                     <path
                       d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                   </svg>
+                  <!-- Contador de las veces que se presiono el boton de compra -->
+                  <span name="ammoItem" id="cartItem" class="position-absolute top-50 start-20 translate-middle badge rounded-pill bg-danger" style="visibility: hidden;">
+                    +<label id="itemNumber"></label>
+                    <span class="visually-hidden">Items in cart</span>
+                  </span>
                 </button>
                 
               </form>
@@ -62,9 +66,30 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            ...
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            ..
+            <br>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Comprar
+            </button>
           </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Despacho de la Orden</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Confirmar Despacho</button>
+                </div>
+            </div>
+            </div>
         </div>
     <!-- Title -->
     <figure class="text-center">
@@ -86,7 +111,7 @@
                               <!-- Product name-->
                               <h5 class="fw-bolder">Acuario con Tapa</h5>
                               <!-- Product price-->
-                              $40.00 - $80.00
+                              $54.990
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -115,8 +140,8 @@
                                   <div class="bi-star-fill"></div>
                               </div>
                               <!-- Product price-->
-                              <span class="text-muted text-decoration-line-through">$20.00</span>
-                              $18.00
+                              <span class="text-muted text-decoration-line-through">$19.990</span>
+                              $11.994
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -130,15 +155,15 @@
                       <!-- Sale badge-->
                       <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">25%</div>
                       <!-- Product image-->
-                      <img class="card-img-top" src="" width="450" height="200" alt="..." />
+                      <img class="card-img-top" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcScGYB_65F8ivAGdIYgOO9nL27xK6vGBltQAFx11YC278-kEkZuIbfHK1WipUfQsZWOL3Yb6zzAaoMuvArstIdIGvL9FBJyWVZZzfCOOh-Twx1dfY_VG6V_Uw&usqp=CAE" width="450" height="200" alt="..." />
                       <!-- Product details-->
                       <div class="card-body p-4">
                           <div class="text-center">
                               <!-- Product name-->
-                              <h5 class="fw-bolder">.</h5>
+                              <h5 class="fw-bolder">Castillo de Decoracion para Peces</h5>
                               <!-- Product price-->
-                              <span class="text-muted text-decoration-line-through">$50.00</span>
-                              $25.00
+                              <span class="text-muted text-decoration-line-through">$15.990</span>
+                              $11.992
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -150,12 +175,12 @@
               <div class="col mb-5">
                   <div class="card h-100">
                       <!-- Product image-->
-                      <img class="card-img-top" src="" width="450" height="200" alt="..." />
+                      <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSGOYJcNHZKzLYwLSNe_VRcazeEL5UmXrCwEXIlGRr-srL92XwoVLK8UfLgeVG39Lfx5UIS5zlpk1-ZEsEkydqbIj_8eWblUzBBNf_vNTTt&usqp=CAE" width="450" height="200" alt="..." />
                       <!-- Product details-->
                       <div class="card-body p-4">
                           <div class="text-center">
                               <!-- Product name-->
-                              <h5 class="fw-bolder">.</h5>
+                              <h5 class="fw-bolder">Plantas de Decoracion</h5>
                               <!-- Product reviews-->
                               <div class="d-flex justify-content-center small text-warning mb-2">
                                   <div class="bi-star-fill"></div>
@@ -165,7 +190,7 @@
                                   <div class="bi-star-fill"></div>
                               </div>
                               <!-- Product price-->
-                              $40.00
+                              $11.990
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -179,15 +204,15 @@
                       <!-- Sale badge-->
                       <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">40%</div>
                       <!-- Product image-->
-                      <img class="card-img-top" src="" width="450" height="200" alt="..." />
+                      <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTzzlQeUIzk-L9P2yZ9H4ZqQRSOef_Ga9Il9rjK0I_w2CNA8MsAHZ9hcJhZg-N0G4-0uqD3inCOyYkUzw5PnoRE-Ob5itUK6PlBNVILqpZmlkDnqWfJ7_Z-jQ&usqp=CAE" width="450" height="200" alt="..." />
                       <!-- Product details-->
                       <div class="card-body p-4">
                           <div class="text-center">
                               <!-- Product name-->
-                              <h5 class="fw-bolder">.</h5>
+                              <h5 class="fw-bolder">Filtro de Agua para Peces</h5>
                               <!-- Product price-->
-                              <span class="text-muted text-decoration-line-through">$50.00</span>
-                              $25.00
+                              <span class="text-muted text-decoration-line-through">$24.990</span>
+                              $14.994
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -199,14 +224,14 @@
               <div class="col mb-5">
                   <div class="card h-100">
                       <!-- Product image-->
-                      <img class="card-img-top" src="" width="450" height="200" alt="..." />
+                      <img class="card-img-top" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRDyAYEEjtednzKiJuwXOqUOiJjswbJRokvjN3h2ZNZXcZ6SaiSrtr6MXCYW1-X9VjDgS4RWPorKbuIzsm4Cev_2pDUCRfhphmv4QuGzF4YUGiCePOlp846&usqp=CAE" width="450" height="200" alt="..." />
                       <!-- Product details-->
                       <div class="card-body p-4">
                           <div class="text-center">
                               <!-- Product name-->
-                              <h5 class="fw-bolder">.</h5>
+                              <h5 class="fw-bolder">Comida para Peces</h5>
                               <!-- Product price-->
-                              $120.00 - $280.00
+                              $1.990
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -218,14 +243,14 @@
               <div class="col mb-5">
                   <div class="card h-100">
                       <!-- Sale badge-->
-                      <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">DCTO 30%</div>
+                      <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">DCTO 15%</div>
                       <!-- Product image-->
-                      <img class="card-img-top" src="" width="450" height="200" alt="..." />
+                      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT0oKqG08D8CqZX9ioPfVPkC0ISbB1GCFO59zVijy6E0LLsLczdOskOraoI5SKfBx1ooTiZt_No66FGwOTh5TlJe14Vxn9cA_c0ZYlR5gEMmqtvKmAhdu3N&usqp=CAE" width="450" height="200" alt="..." />
                       <!-- Product details-->
                       <div class="card-body p-4">
                           <div class="text-center">
                               <!-- Product name-->
-                              <h5 class="fw-bolder">.</h5>
+                              <h5 class="fw-bolder">Termometro Acuatico</h5>
                               <!-- Product reviews-->
                               <div class="d-flex justify-content-center small text-warning mb-2">
                                   <div class="bi-star-fill"></div>
@@ -235,8 +260,8 @@
                                   <div class="bi-star-fill"></div>
                               </div>
                               <!-- Product price-->
-                              <span class="text-muted text-decoration-line-through">$20.00</span>
-                              $18.00
+                              <span class="text-muted text-decoration-line-through">$5.990</span>
+                              $5.091
                           </div>
                       </div>
                       <!-- Product actions-->
@@ -248,12 +273,12 @@
               <div class="col mb-5">
                   <div class="card h-100">
                       <!-- Product image-->
-                      <img class="card-img-top" src="" width="450" height="200" alt="..." />
+                      <img class="card-img-top" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTjZes_RtEUvpOs0KOn3LzX60Tz9dENcPeE3ghv_a8nuMXj34E3n5G6iR_inWDJKPR_PPvzQCauhWcjFcfIBkytrrUxijY9IlZ-W2p9Db6mTEJ3H1Kd66E-&usqp=CAE" width="450" height="200" alt="..." />
                       <!-- Product details-->
                       <div class="card-body p-4">
                           <div class="text-center">
                               <!-- Product name-->
-                              <h5 class="fw-bolder">.</h5>
+                              <h5 class="fw-bolder">Caja de Alimentacion para Peces</h5>
                               <!-- Product reviews-->
                               <div class="d-flex justify-content-center small text-warning mb-2">
                                   <div class="bi-star-fill"></div>
@@ -263,7 +288,7 @@
                                   <div class="bi-star-fill"></div>
                               </div>
                               <!-- Product price-->
-                              $40.00
+                              $6.990
                           </div>
                       </div>
                       <!-- Product actions-->
