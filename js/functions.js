@@ -14,7 +14,7 @@ function showNumber(itemNumber){
 
 function confPass(){
     if (document.getElementById("password").value === document.getElementById("confPassword").value)
-    console.log("funciona");
+    console.log("Contraseñas iguales");
     else 
     console.log("No son iguales")
 }
