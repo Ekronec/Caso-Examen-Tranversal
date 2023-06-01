@@ -11,6 +11,9 @@
     <script src="js/jquery-3.6.4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/functions.js"></script>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript%}
 </head>
 <body class="text-center">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -62,6 +65,7 @@
     
 <main class="form-signin w-100 m-auto">
   <form action="" method="post"> 
+    {% csrf_token %}
     <img class="mb-4" src="images/Animalia logo.png" alt="" rem="18">
     <h1 class="h3 mb-3 fw-normal">Crear Nueva Cuenta</h1>
 
@@ -71,8 +75,13 @@
     </div>
     <div class="form-floating">
       <input type="text" class="form-control"  placeholder="Name" id="nameUsuario" name="nameUsuario" required>
-      <label for="nameUsuario">Nombre Completo</label>
-    </div><br>
+      <label for="nameUsuario">Nombre</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control"  placeholder="lastname" id="lastName" name="lastName" required>
+      <label for="nameUsuario">Apellidos</label>
+    </div>
+    <br>
     <div class="form-floating">
       <input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
       <label for="password">Contraseña</label>
