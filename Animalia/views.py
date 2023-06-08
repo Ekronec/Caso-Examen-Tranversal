@@ -6,38 +6,57 @@ from .models import UserAnimalia
 def index(request):
     usuario = UserAnimalia.objects.all()
     context = {"user": usuario}
-    
     return render(request, "pages/index.html", context)
 
 def login(request):
     usuario = UserAnimalia.objects.all()
     context = {"user": usuario}
-    
     return render(request, "pages/login.html", context)
 
 def Dog(request):
     usuario = UserAnimalia.objects.all()
     context = {"user": usuario}
-    
     return render(request, "pages/Dog.html", context)
 
 def Cat(request):
     usuario = UserAnimalia.objects.all()
     context = {"user": usuario}
-    
     return render(request, "pages/Cat.html", context)
 
 def aquatic(request):
     usuario = UserAnimalia.objects.all()
     context = {"user": usuario}
-    
     return render(request, "pages/aquatic.html", context)
 
 
 def signin(request):
-    user = UserAnimalia.objects.all()
-    context = {"user" : user}
+    if request.method != "POST":
+        user = UserAnimalia.objects.all()
+        context = {"user" : user}
+        return render(request, 'pages/signin.html', context)
+    else:
+        emailUsuario = request.POST["emailUsuario"] 
+        nameUsuario = request.POST["nameUsuario"]
+        lastName = request.POST["lastName"]
+        password = request.POST["password"] 
+        region = request.POST["region"]
+        name_comuna = request.POST["comuna"]
+        address = request.POST["address"]
     
-    return render(request, 'pages/signin.html', context)
+    objUser = UserAnimalia.objects.create(
+        emailUsuario = emailUsuario,
+        nameUsuario = nameUsuario,
+        lastName = lastName,
+        password = password,
+        region = region,
+        name_comuna = name_comuna,
+        address = address,
+        activo = 1,
+    )
+    objUser.save()
+    context = {"mensaje" : "OK Usuario Registrado"}
+    return(request, "pages/signin.html", context)
+
+
 
 

@@ -67,7 +67,7 @@
 
     
 <main class="form-signin w-100 m-auto">
-  <form action="" method="post"> 
+  <form action="" method="POST"> 
     {% csrf_token %}
     <img class="mb-4" src="{% static 'images/Animalia logo.png'%}" alt="" rem="18">
     <h1 class="h3 mb-3 fw-normal">Crear Nueva Cuenta</h1>
@@ -104,8 +104,8 @@
       <label for="comuna">Comuna</label>
     </div>
     <div class="form-floating">
-      <select type="text" class="form-control"  placeholder="adress" id="adress" name="adress" required>
-      <label for="adress">Calle</label>
+      <select type="text" class="form-control"  placeholder="address" id="address" name="address" required>
+      <label for="address">Calle</label>
     </div>
       <br>
     <div class="checkbox mb-3">
@@ -113,7 +113,7 @@
         <input type="checkbox" value="remember-me"> Recuerdame
       </label>
     </div>
-    <input class="w-100 btn btn-lg btn-primary" type="button" value="Ingresar" name="createUser" id="createUser" onclick="confPass()" onclick="addingEmail()">
+    <input class="w-100 btn btn-lg btn-primary" type="submit" value="Ingresar" name="createUser" id="createUser" onclick="confPass()" onclick="addingEmail()">
     <p class="mt-5 mb-3 text-body-secondary">© 2023</p>
   </form>
 </main>

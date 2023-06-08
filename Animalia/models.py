@@ -8,6 +8,7 @@ class UserAnimalia(models.Model):
     lastName = models.CharField(max_length=100, blank=False, null=False)
     password = models.CharField(max_length=50, blank=False, null=False)
     region = models.ForeignKey('region', on_delete=models.CASCADE, db_column='id_region')
+    address = models.CharField(max_length=100, blank=False, null=False)
     activo = models.IntegerField()
     
 class Region(models.Model):
