@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/signin.css" rel="stylesheet">
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.6.4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="js/functions.js"></script>
+
+    {% load static %}
+    <script src="{% static 'js/jquery-3.6.4.js'%}"></script>
+    <script src="{% static 'js/functions.js'%}"></script>
+
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript%}
+    <link href="{% static 'css/signin.css' %}"  rel="stylesheet">
+
+
 </head>
 <body class="text-center">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -66,7 +69,7 @@
 <main class="form-signin w-100 m-auto">
   <form action="" method="post"> 
     {% csrf_token %}
-    <img class="mb-4" src="images/Animalia logo.png" alt="" rem="18">
+    <img class="mb-4" src="{% static 'images/Animalia logo.png'%}" alt="" rem="18">
     <h1 class="h3 mb-3 fw-normal">Crear Nueva Cuenta</h1>
 
     <div class="form-floating">
@@ -116,5 +119,4 @@
 </main>
 
 </body>
-<script crossorigin="anonymous" src="js/function.js"></script>
 </html>

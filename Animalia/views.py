@@ -41,8 +41,3 @@ def signin(request):
     return render(request, 'pages/signin.html', context)
 
 
-def cssLogin(request):
-    usuario = UserAnimalia.objects.all()
-    context = {"user": usuario}
-    
-    return render(request, "pages/css/signin.css", context)
