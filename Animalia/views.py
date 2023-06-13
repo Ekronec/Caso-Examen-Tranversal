@@ -40,7 +40,7 @@ def signin(request):
         lastName = request.POST["lastName"]
         password = request.POST["password"] 
         region = request.POST["region"]
-        name_comuna = request.POST["comuna"]
+        comuna = request.POST["comuna"]
         address = request.POST["address"]
     
     objUser = UserAnimalia.objects.create(
@@ -49,7 +49,7 @@ def signin(request):
         lastName = lastName,
         password = password,
         region = region,
-        name_comuna = name_comuna,
+        comuna = comuna,
         address = address,
         activo = 1,
     )
