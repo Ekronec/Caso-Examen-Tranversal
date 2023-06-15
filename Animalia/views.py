@@ -28,6 +28,10 @@ def aquatic(request):
     context = {"user": usuario}
     return render(request, "pages/aquatic.html", context)
 
+def Bird(request):
+    usuario = UserAnimalia.objects.all()
+    context = {"user": usuario}
+    return render(request, "pages/Bird.html", context)
 
 def signin(request):
     if request.method != "POST":
