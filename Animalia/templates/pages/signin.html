@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     {% load static %}
     <script src="{% static 'js/jquery-3.6.4.js'%}"></script>
     <script src="{% static 'js/functions.js'%}"></script>
+    <script src="{% static 'js/loadApi.js'%}"></script>
 
     {% load bootstrap5 %}
     {% bootstrap_css %}
@@ -101,10 +101,12 @@
     </div>
     <div class="form-floating">
       <select type="text" class="form-control"  placeholder="comuna" id="comuna" name="comuna" required>
+        <option value="" disable hidden></option>
+      </select>
       <label for="comuna">Comuna</label>
     </div>
     <div class="form-floating">
-      <select type="text" class="form-control"  placeholder="address" id="address" name="address" required>
+      <input type="text" class="form-control"  placeholder="address" id="address" name="address" required>
       <label for="address">Calle</label>
     </div>
       <br>
