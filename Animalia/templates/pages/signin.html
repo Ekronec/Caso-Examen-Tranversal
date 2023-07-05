@@ -10,6 +10,7 @@
     <script src="{% static 'js/jquery-3.6.4.js'%}"></script>
     <script src="{% static 'js/functions.js'%}"></script>
     <script src="{% static 'js/loadApi.js'%}"></script>
+    <script crossorigin="anonymous" src="{% static 'js/function.js'%}"></script>
 
     {% load bootstrap5 %}
     {% bootstrap_css %}
@@ -94,10 +95,18 @@
       <label for="confPassword">Confirmar Contraseña</label>
     </div>
     <div class="form-floating">
+      <label for="region"></label>
       <select type="text" class="form-control"  placeholder="region" id="region" name="region" required>
         <option value="" disable hidden></option>
       </select> 
       <label for="region">Region</label>
+    </div>
+    <div class="form-floating">
+      <label for="provincia"></label>
+      <select type="text" class="form-control"  placeholder="provincia" id="provincia" name="provincia" required>
+        <option value="" disable hidden></option>
+      </select> 
+      <label for="provincia">Provincia</label>
     </div>
     <div class="form-floating">
       <select type="text" class="form-control"  placeholder="comuna" id="comuna" name="comuna" required>
