@@ -8,6 +8,7 @@ class UserAnimalia(models.Model):
     lastName = models.CharField(max_length=100, blank=False, null=False)
     password = models.CharField(max_length=50, blank=False, null=False)
     region = models.CharField(max_length=50, blank=False, null=False)
+    provincia = models.CharField(max_length=50, blank=False, null=False)
     comuna = models.CharField(max_length=50, blank=False, null=False)
     address = models.CharField(max_length=100, blank=False, null=False)
     activo = models.IntegerField()

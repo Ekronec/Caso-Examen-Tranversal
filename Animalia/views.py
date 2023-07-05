@@ -44,6 +44,7 @@ def signin(request):
         lastName = request.POST["lastName"]
         password = request.POST["password"] 
         region = request.POST["region"]
+        provincia = request.POST["provincia"]
         comuna = request.POST["comuna"]
         address = request.POST["address"]
     
@@ -53,6 +54,7 @@ def signin(request):
         lastName = lastName,
         password = password,
         region = region,
+        provincia = provincia,
         comuna = comuna,
         address = address,
         activo = 1,
