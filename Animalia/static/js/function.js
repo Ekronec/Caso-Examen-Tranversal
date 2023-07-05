@@ -68,7 +68,7 @@ $(document).ready(function () {
 
   //Replicamos el mismo proceso de la funcion anterior pero con el select de provincias
   $("#provincia").change(function () {
-    var idRegion = $("#cboRegiones").val();
+    var idRegion = $("#region").val();
     var idProvincia = $("#provincia").val();
     $("#comuna").attr("disabled",false);
     $("#comuna").empty();
