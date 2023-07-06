@@ -1,7 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
 .carrito{
     border: 1px solid #666;
-    width: 35%;
+    width: 100%;
     margin-top: 30px;
     border-radius: 10px;
     overflow: hidden;
@@ -27,9 +28,7 @@
     border-bottom: 1px solid #666;
     padding: 20px;
 }
-.carrito .carrito-item img{
-    margin-right: 20px;
-}
+
 .carrito .carrito-item .carrito-item-titulo{
     display: block;
     font-weight: bold;
@@ -50,13 +49,13 @@
     text-align: center;
 }
 .carrito .carrito-item .selector-cantidad i{
-    font-size: 18px;
+    font-size: 1px;
     width: 32px;
     height: 32px;
     line-height: 32px;
     text-align: center;
     border-radius: 50%;
-    border: 1px solid #000;
+    border: 15px solid #000;
     cursor: pointer;
 }
 .carrito .carrito-item .carrito-item-precio{
