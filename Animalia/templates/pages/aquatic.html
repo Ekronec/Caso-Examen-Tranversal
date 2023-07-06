@@ -86,7 +86,36 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                ...
+                    <main class="form-signin w-100 m-auto">
+                        <form action="" method="POST"> 
+                          {% csrf_token %}
+                            <div class="form-floating">
+                              <label for="region"></label>
+                              <select type="text" class="form-control"  placeholder="region" id="region" name="region" required>
+                                <option value="" disable hidden></option>
+                              </select> 
+                              <label for="region">Region</label>
+                            </div>
+                            <div class="form-floating">
+                              <label for="provincia"></label>
+                              <select type="text" class="form-control"  placeholder="provincia" id="provincia" name="provincia" required>
+                                <option value="" disable hidden></option>
+                              </select> 
+                              <label for="provincia">Provincia</label>
+                            </div>
+                            <div class="form-floating">
+                              <label for="comuna"></label>
+                              <select type="text" class="form-control"  placeholder="comuna" id="comuna" name="comuna" required>
+                                <option value="" disable hidden></option>
+                              </select>
+                              <label for="comuna">Comuna</label>
+                            </div>
+                            <div class="form-floating">
+                              <input type="text" class="form-control"  placeholder="address" id="address" name="address" required>
+                              <label for="address">Calle</label>
+                            </div>
+                        </form>
+                      </main>
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Confirmar Despacho</button>
