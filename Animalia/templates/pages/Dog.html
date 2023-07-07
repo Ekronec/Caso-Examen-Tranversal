@@ -7,7 +7,9 @@
     <title>Perro</title>
     {% load static %}
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/carrito.css' %}" rel="stylesheet">
     <script src="{% static 'js/functions.js' %}"></script>
+    <script src="{% static 'js/carrito.js' %}" async></script>
     {% load bootstrap5 %}
     {% bootstrap_javascript%}
 </head>
@@ -71,12 +73,26 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            ..
-            <br>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Comprar
-            </button>
+            <div class="carrito" id="carrito">
+              <div class="header-carrito">
+                  <h2>Tu Carrito</h2>
+              </div>
+      
+              <div class="carrito-items">
+                  <!--  -->
+              </div>
+              <div class="carrito-total">
+                  <div class="fila">
+                      <strong>Tu Total</strong>
+                      <span class="carrito-precio-total">
+                          $120.000,00
+                      </span>
+                  </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Comprar
+                      <i class="fa-solid fa-bag-shopping"></i> </button>
+              </div>
+          </div>
           </div>
         </div>
         <!-- Modal -->
@@ -145,13 +161,11 @@
                               <!-- Product name-->
                               <h5 class="fw-bolder">Collar de Perro</h5>
                               <!-- Product price-->
-                              $4.990
+                              <span class="precio-item">$4.990</span>
                           </div>
                       </div>
                       <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>  
-                      </div>
+                      <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                   </div>
               </div>
               <div class="col mb-5">
@@ -175,13 +189,11 @@
                               </div>
                               <!-- Product price-->
                               <span class="text-muted text-decoration-line-through">$8.990</span>
-                              $5.394
+                              <span class="precio-item">$5.394</span>
                           </div>
                       </div>
                       <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>  
-                      </div>
+                      <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                   </div>
               </div>
               <div class="col mb-5">
@@ -197,13 +209,11 @@
                               <h5 class="fw-bolder">Femur de Vacuno XXL</h5>
                               <!-- Product price-->
                               <span class="text-muted text-decoration-line-through">$9.990</span>
-                              $7.492
+                              <span class="precio-item">$7.492</span>
                           </div>
                       </div>
                       <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>  
-                      </div>
+                      <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                   </div>
               </div>
               <div class="col mb-5">
@@ -224,13 +234,11 @@
                                   <div class="bi-star-fill"></div>
                               </div>
                               <!-- Product price-->
-                              $2.990
+                              <span class="precio-item">$2.990</span>
                           </div>
                       </div>
                       <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>
-                      </div>
+                      <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                   </div>
               </div>
               <div class="col mb-5">
@@ -246,13 +254,11 @@
                               <h5 class="fw-bolder">Cama para Perro</h5>
                               <!-- Product price-->
                               <span class="text-muted text-decoration-line-through">$28.990</span>
-                              $17.394
+                              <span class="precio-item">$17.394</span>
                           </div>
                       </div>
                       <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>  
-                      </div>
+                      <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                   </div>
               </div>
               <div class="col mb-5">
@@ -265,13 +271,11 @@
                               <!-- Product name-->
                               <h5 class="fw-bolder">Cama de Perro</h5>
                               <!-- Product price-->
-                              $33.990
+                              <span class="precio-item">$33.990</span>
                           </div>
                       </div>
                       <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>  
-                      </div>
+                      <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                   </div>
               </div>
               <div class="col mb-5">
@@ -295,13 +299,11 @@
                               </div>
                               <!-- Product price-->
                               <span class="text-muted text-decoration-line-through">$15.990</span>
-                              $11.193
+                              <span class="precio-item">$11.193</span>
                           </div>
                       </div>
                       <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>  
-                      </div>
+                      <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                   </div>
               </div>
               <div class="col mb-5">
@@ -322,13 +324,11 @@
                                   <div class="bi-star-fill"></div>
                               </div>
                               <!-- Product price-->
-                              $1.990
+                              <span class="precio-item">$1.990</span>
                           </div>
                       </div>
                       <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>  
-                      </div>
+                      <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                   </div>
               </div>
           </div>

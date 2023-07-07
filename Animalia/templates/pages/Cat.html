@@ -7,7 +7,9 @@
     <title>Gato</title>
     {% load static %}
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/carrito.css' %}" rel="stylesheet">
     <script src="{% static 'js/functions.js' %}"></script>
+    <script src="{% static 'js/carrito.js' %}" async></script>
     {% load bootstrap5 %}
     {% bootstrap_javascript%}
 
@@ -69,12 +71,26 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            ..
-            <br>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Comprar
-            </button>
+            <div class="carrito" id="carrito">
+                <div class="header-carrito">
+                    <h2>Tu Carrito</h2>
+                </div>
+        
+                <div class="carrito-items">
+                    <!--  -->
+                </div>
+                <div class="carrito-total">
+                    <div class="fila">
+                        <strong>Tu Total</strong>
+                        <span class="carrito-precio-total">
+                            $120.000,00
+                        </span>
+                    </div>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Comprar
+                        <i class="fa-solid fa-bag-shopping"></i> </button>
+                </div>
+            </div>
           </div>
         </div>
         <!-- Modal -->
@@ -143,13 +159,11 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">Rascador para Gatos Mediano</h5>
                                 <!-- Product price-->
-                                $62.243
+                                <span class="precio-item">$62.243</span>
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>
-                        </div>
+                        <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -173,13 +187,11 @@
                                 </div>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through">$21.990</span>
-                                $13.194
+                                <span class="precio-item">$13.194</span>
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>
-                        </div>
+                        <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -195,13 +207,11 @@
                                 <h5 class="fw-bolder">Transportin para Gatos Transformable</h5>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through">$27.990</span>
-                                $20.992
+                                <span class="precio-item">$20.992</span>
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>
-                        </div>
+                        <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -222,13 +232,11 @@
                                     <div class="bi-star-fill"></div>
                                 </div>
                                 <!-- Product price-->
-                                $4.990
+                                <span class="precio-item">$4.990</span>
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>
-                        </div>
+                        <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -244,13 +252,11 @@
                                 <h5 class="fw-bolder">Arenero para Gatos</h5>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through">$17.990</span>
-                                $10.794
+                                <span class="precio-item">$10.794</span>
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>
-                        </div>
+                        <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -263,13 +269,11 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">Cepillo Deslanador para Gatos</h5>
                                 <!-- Product price-->
-                                $19.990
+                                <span class="precio-item">$19.990</span>
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>
-                        </div>
+                        <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -293,13 +297,11 @@
                                 </div>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through">$24.990</span>
-                                $17.493
+                                <span class="precio-item">$17.493</span>
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>
-                        </div>
+                        <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="col mb-5">
@@ -320,13 +322,11 @@
                                     <div class="bi-star-fill"></div>
                                 </div>
                                 <!-- Product price-->
-                                $5.990
+                                <span class="precio-item">$5.990</span>
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <a href=""><div class="text-center" onclick="addItemNumber()"><a class="btn btn-outline-dark mt-auto" >Agregar al carro</a></div></a>
-                        </div>
+                        <button class="btn btn-outline-dark mt-auto">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
